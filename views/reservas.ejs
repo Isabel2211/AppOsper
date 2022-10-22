@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/reservas.css" />
+    <title>Reservas</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <p>Resta<span class="span-logo">urante</span></p>
+      </div>
+      <nav class="nav-bar">
+        <a href="/">Inicio</a>
+        <a href="">Menu</a>
+        <a href="reservas">Reservaciones</a>
+        <a href="pedidos">Pedidos</a>
+        <a href="auth">Administracion</a>
+      </nav>
+    </header>
+    <section class="section-formulario">
+      <h1>Reserva tu Mesa</h1>
+      <div class="contenedor">
+        <div class="contenedor-img"></div>
+        <div class="formulario">
+          <div class="titulo-formulario">
+            <h1>Reserva</h1>
+          </div>
+          <form method="post">
+            <div class="contenedor-formulario">
+              <div class="contenedor-input">
+                <label>fecha</label>
+                <input type="date" id="fecha" name="fecha" />
+              </div>
+              <div class="contenedor-input">
+                <label>hora</label>
+                <input type="time" id="hora" name="hora" />
+              </div>
+              <div class="contenedor-input">
+                <label>nombre</label>
+                <input
+                  type="text"
+                  id="nombre"
+                  name="nombre"
+                  placeholder="nombre"
+                />
+              </div>
+              <div class="contenedor-input">
+                <label>telefono</label>
+                <input
+                  type="number"
+                  id="telefono"
+                  name="telefono"
+                  placeholder="telefono"
+                />
+              </div>
+              <div class="contenedor-input">
+                <label>personas</label>
+                <input
+                  type="number"
+                  id="personasmesa"
+                  name="personasmesa"
+                  placeholder="personas por mesa"
+                />
+              </div>
+              <div class="contenedor-btn">
+                <input class="btn-reservar" type="submit" value="Reservar" />
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <p>&copy, copyright @ ramilian rincon</p>
+    </footer>
+  </body>
+</html>

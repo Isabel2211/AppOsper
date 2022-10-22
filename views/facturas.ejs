@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/registropedidos.css" />
+    <title>Facturas de ventas</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <p>Resta<span class="span-logo">urante</span></p>
+      </div>
+      <nav class="nav-bar">
+        <a href="/">Inicio</a>
+        <a href="">Menu</a>
+        <a href="reservas">Reservaciones</a>
+        <a href="pedidos">Pedidos</a>
+        <a href="auth">Administracion</a>
+      </nav>
+    </header>
+    <section class="contactos" id="formularios">
+      <h1>Facturas de ventas</h1>
+      <table class="pedidos">
+        <thead>
+          <tr>
+            <th>Identificacion</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Direccion</th>
+            <th>Whatsapp</th>
+            <th>Orden</th>
+            <th>Fecha de venta</th>
+            <th>Total</th>
+            <th>Accion</th>
+          </tr>
+        </thead>
+        <% if (arrayFacturas) { %> <% arrayFacturas.forEach(Facturas => { %>
+        <tbody>
+          <tr>
+            <td><%= Facturas.identificacion %></td>
+            <td><%= Facturas.nombre %></td>
+            <td><%= Facturas.apellido %></td>
+            <td><%= Facturas.direccion %></td>
+            <td><%= Facturas.whatsapp %></td>
+            <td><%= Facturas.orden %></td>
+            <td><%= Facturas.fecha %></td>
+            <td><%= Facturas.total %></td>
+            <td>accion</td>
+          </tr>
+        </tbody>
+        <% }) %> <% } %>
+      </table>
+    </section>
+    <footer class="footer">
+      <p>&copy, copyright @ ramilian rincon</p>
+    </footer>
+  </body>
+</html>

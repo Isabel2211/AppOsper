@@ -1,0 +1,152 @@
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/pexels-rene-asmussen-1581384.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.header {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header .logo {
+  color: white;
+  font-size: 1.5rem;
+  margin-left: 20px;
+}
+
+.span-logo {
+  color: yellow;
+}
+
+.nav-bar {
+  margin-right: 50px;
+}
+
+.nav-bar a {
+  color: white;
+  margin: 20px;
+  text-decoration: none;
+}
+
+.nav-bar a:hover {
+  text-decoration: underline;
+}
+
+.contactos {
+  width: 100%;
+  height: 1000px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.contactos h1 {
+  color: white;
+  text-align: center;
+}
+
+.pedidos {
+  width: 700px;
+  text-align: left;
+  border-collapse: collapse;
+  margin: 0px auto;
+}
+
+th,
+td {
+  border: 1px solid black;
+  padding: 20px;
+}
+
+thead {
+  background: rgb(229, 255, 0);
+  color: white;
+  font-size: 1rem;
+  text-align: center;
+}
+
+tbody {
+  color: black;
+}
+
+/* tr:nth-child(even){
+  background: #ddd;
+}*/
+
+tr:hover td {
+  background-color: #666;
+}
+
+td {
+  font-size: 1rem;
+  background: rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.boton-eliminar {
+  width: 60px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: red;
+}
+
+.boton-eliminar:hover {
+  cursor: pointer;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer p {
+  color: white;
+  font-size: 1.3rem;
+}
+
+@media (max-width: 768px) {
+  .header {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header .logo {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 auto;
+  }
+
+  .span-logo {
+    color: yellow;
+  }
+
+  .nav-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .nav-bar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  .nav-bar a:hover {
+    text-decoration: underline;
+  }
+}

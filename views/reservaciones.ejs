@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/reservaciones.css" />
+    <title>Reservaciones</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <p>Resta<span class="span-logo">urante</span></p>
+      </div>
+      <nav class="nav-bar">
+        <a href="/">Inicio</a>
+        <a href="">Menu</a>
+        <a href="reservas">Reservaciones</a>
+        <a href="pedidos">Pedidos</a>
+        <a href="auth">Administracion</a>
+      </nav>
+    </header>
+    <section class="reservaciones">
+      <h1>Administracion de Reservaciones</h1>
+      <div class="container-reservaciones">
+        <% if (arrayReservas) { %> <% arrayReservas.forEach(Reserva => { %>
+
+        <div class="card-reservaciones">
+          <h1><%= Reserva.nombre %></h1>
+          <p><%= Reserva.fecha %></p>
+          <p><%= Reserva.hora %></p>
+          <p><%= Reserva.personasmesa %></p>
+          <button
+            class="btn-eliminar"
+            id="btnEliminar"
+            data-id="<%= Reserva.id %>"
+          >
+            Elminar
+          </button>
+        </div>
+        <% }) %> <% } %>
+      </div>
+    </section>
+    <footer class="footer">
+      <p>&copy, copyright @ ramilian rincon</p>
+    </footer>
+    <script>
+      const btnEliminar = document.querySelector("#btnEliminar");
+      btnEliminar.addEventListener("click", async () => {
+        const id = btnEliminar.dataset.id;
+        try {
+          const data = await fetch(`reservaciones/${id}`, {
+            method: "delete",
+          });
+          const res = await data.json();
+          if (res.estado) {
+            window.location.href = "reservaciones";
+          } else {
+            console.log(res);
+          }
+        } catch (error) {
+          console.log(error);
+        }
+      });
+    </script>
+  </body>
+</html>

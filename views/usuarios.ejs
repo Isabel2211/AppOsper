@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/pedidos.css" />
+    <title>Registro de usuarios</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <p>Resta<span class="span-logo">urante</span></p>
+      </div>
+      <nav class="nav-bar">
+        <a href="/">Inicio</a>
+        <a href="">Menu</a>
+        <a href="reservas">Reservaciones</a>
+        <a href="pedidos">Pedidos</a>
+        <a href="auth">Administracion</a>
+      </nav>
+    </header>
+    <section class="pedidos">
+      <h1>Registro de usuarios</h1>
+      <form method="post">
+        <div class="container-formulario">
+          <div class="cabecera-forulario">
+            <h1>Restaurante</h1>
+          </div>
+          <div class="cuerpo-formulario">
+            <div class="input-contenedor">
+              <label>Nombre</label>
+              <input
+                class="input"
+                type="text"
+                id="nombre"
+                name="nombre"
+                placeholder="ingrese su nombre"
+              />
+            </div>
+            <div class="input-contenedor">
+              <label>Correo</label>
+              <input
+                class="input"
+                type="email"
+                id="correo"
+                name="correo"
+                placeholder="ingrese su correo"
+              />
+            </div>
+            <div class="input-contenedor">
+              <label>Contraseña</label>
+              <input
+                class="input"
+                type="password"
+                id="contraseña"
+                name="contraseña"
+                placeholder="ingrese la contraseña"
+              />
+            </div>
+            <div class="input-contenedor">
+              <label>Rol puede ser ADMIN_ROL o USER_ROL</label>
+              <input
+                class="input"
+                type="text"
+                id="rol"
+                name="rol"
+                placeholder="ingrese el rol"
+              />
+            </div>
+            <div class="btn-contenedor">
+              <input class="input-btn" type="submit" value="Registrarse" />
+            </div>
+          </div>
+        </div>
+      </form>
+    </section>
+    <footer class="footer">
+      <p>&copy, copyright @ ramilian rincon</p>
+    </footer>
+  </body>
+</html>

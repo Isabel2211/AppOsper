@@ -1,0 +1,93 @@
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/pexels-rene-asmussen-1581384.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.header {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header .logo {
+  color: white;
+  font-size: 1.5rem;
+  margin-left: 20px;
+}
+
+.span-logo {
+  color: yellow;
+}
+
+.nav-bar {
+  margin-right: 50px;
+}
+
+.nav-bar a {
+  color: white;
+  margin: 20px;
+  text-decoration: none;
+}
+
+.nav-bar a:hover {
+  text-decoration: underline;
+}
+
+.administracion {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.administracion h1 {
+  color: white;
+}
+
+.container-administracion {
+  width: 700px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.container-item {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.img {
+  width: 100px;
+  height: 110px;
+}
+
+.img img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.container-item a {
+  color: white;
+  font-size: 1rem;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer p {
+  color: white;
+  font-size: 1.3rem;
+}

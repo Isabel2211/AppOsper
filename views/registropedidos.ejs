@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/registropedidos.css" />
+    <title>Registro de pedidos</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <p>Resta<span class="span-logo">urante</span></p>
+      </div>
+      <nav class="nav-bar">
+        <a href="/">Inicio</a>
+        <a href="">Menu</a>
+        <a href="reservas">Reservaciones</a>
+        <a href="pedidos">Pedidos</a>
+        <a href="auth">Administracion</a>
+      </nav>
+    </header>
+    <section class="contactos" id="formularios">
+      <h1>Registro de pedidos</h1>
+      <table class="pedidos">
+        <thead>
+          <tr>
+            <th>Identificacion</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Direccion</th>
+            <th>Whatsapp</th>
+            <th>Orden</th>
+            <th>Accion</th>
+          </tr>
+        </thead>
+        <% if (arrayRegistro) { %> <% arrayRegistro.forEach(Registro => { %>
+        <tbody>
+          <tr>
+            <td><%= Registro.identificacion %></td>
+            <td><%= Registro.nombre %></td>
+            <td><%= Registro.apellido %></td>
+            <td><%= Registro.direccion %></td>
+            <td><%= Registro.whatsapp %></td>
+            <td><%= Registro.orden %></td>
+            <td>
+              <button
+                class="boton-eliminar"
+                id="btnEliminar"
+                data-id="<%= Registro.id %>"
+              >
+                Eliminar
+              </button>
+            </td>
+          </tr>
+        </tbody>
+        <% }) %> <% } %>
+      </table>
+    </section>
+    <footer class="footer">
+      <p>&copy, copyright @ ramilian rincon</p>
+    </footer>
+
+    <script>
+      const btnEliminar = document.querySelector("#btnEliminar");
+      btnEliminar.addEventListener("click", async () => {
+        const id = btnEliminar.dataset.id;
+        try {
+          const data = await fetch(`registropedidos/${id}`, {
+            method: "delete",
+          });
+          const res = await data.json();
+          if (res.estado) {
+            window.location.href = "registropedidos";
+          } else {
+            console.log(res);
+          }
+        } catch (error) {
+          console.log(error);
+        }
+      });
+    </script>
+  </body>
+</html>

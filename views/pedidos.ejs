@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/pedidos.css" />
+    <title>Pedidos</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <p>Resta<span class="span-logo">urante</span></p>
+      </div>
+      <nav class="nav-bar">
+        <a href="/">Inicio</a>
+        <a href="">Menu</a>
+        <a href="reservas">Reservaciones</a>
+        <a href="pedidos">Pedidos</a>
+        <a href="auth">Administracion</a>
+      </nav>
+    </header>
+    <section class="pedidos">
+      <h1>Pedidos</h1>
+      <form method="post">
+        <div class="container-formulario">
+          <div class="cabecera-forulario">
+            <h1>Restaurante</h1>
+            <h2 class="parrafo">Realiza tu pedido</h2>
+          </div>
+          <div class="cuerpo-formulario">
+            <div class="input-contenedor">
+              <label>Identificacion</label>
+              <input
+                class="input"
+                type="number"
+                id="identificacion"
+                name="identificacion"
+                placeholder="ingrese su identificacion"
+              />
+            </div>
+            <div class="input-contenedor">
+              <label>Nombre</label>
+              <input
+                class="input"
+                type="text"
+                id="nombre"
+                name="nombre"
+                placeholder="ingrese su nombre"
+              />
+            </div>
+            <div class="input-contenedor">
+              <label>Apellido</label>
+              <input
+                class="input"
+                type="text"
+                id="apellido"
+                name="apellido"
+                placeholder="ingrese su apellido"
+              />
+            </div>
+            <div class="input-contenedor">
+              <label>Direccion</label>
+              <input
+                class="input"
+                type="text"
+                id="direccion"
+                name="direccion"
+                placeholder="ingrese su direccion"
+              />
+            </div>
+            <div class="input-contenedor">
+              <label>Whatsapp</label>
+              <input
+                class="input"
+                type="number"
+                id="whatsapp"
+                name="whatsapp"
+                placeholder="ingrese su whatsapp"
+              />
+            </div>
+            <div class="input-contenedor">
+              <label>Orden</label>
+              <input
+                class="input"
+                type="text"
+                id="orden"
+                name="orden"
+                placeholder="ingrese su orden"
+              />
+            </div>
+            <div class="btn-contenedor">
+              <input class="input-btn" type="submit" value="Realizar Pedido" />
+            </div>
+          </div>
+        </div>
+      </form>
+    </section>
+    <footer class="footer">
+      <p>&copy, copyright @ ramilian rincon</p>
+    </footer>
+  </body>
+</html>
